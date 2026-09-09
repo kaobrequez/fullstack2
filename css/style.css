@@ -1,0 +1,25 @@
+.formulario {
+    width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+.content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+}
+fieldset {
+
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+
+}
+#contenedor-mensaje {
+    width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #a01c1c;
+    display: none;
+}

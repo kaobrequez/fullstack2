@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="js/script.js" type="module"></script>
+</head>
+
+<body>
+    <form action="#" method="post" class="card formulario">
+        <header class="card-header">
+            <p class="card-header-title">Registro de usuario</p>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                <label>
+                    Nombre de usuario:
+                    <input type="text" name="username" placeholder="Ej. usuario123" required aria-required="true"
+                        autocomplete="username" class="input is-primary" />
+                </label>
+                <br>
+                <label>
+                    Correo electrónico:
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" required aria-required="true"
+                        autocomplete="email" class="input is-primary" />
+                </label>
+                <br>
+                <label>
+                    Teléfono móvil:
+                    <input type="tel" name="phone" placeholder="+56912345678" pattern="^(\+?56)?\s?9\d{8}$"
+                        title="Ingrese un número chileno válido (ej: +56912345678 o 912345678)" required
+                        aria-required="true" autocomplete="tel" class="input is-primary" />
+                </label>
+                <br>
+                <label>
+                    Edad:
+                    <input class="input is-primary" type="number" name="age" />
+                </label>
+                <br>
+                <label>
+                    País:
+                    <div class="select is-primary">
+                        <select name="country" required aria-required="true" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="" selected disabled>Seleccione país</option>
+                            <option value="AR">Argentina</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BR">Brasil</option>
+                            <option value="CL">Chile</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CU">Cuba</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="HN">Honduras</option>
+                            <option value="MX">México</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="PA">Panamá</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Perú</option>
+                            <option value="DO">República Dominicana</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="VE">Venezuela</option>
+                        </select>
+                    </div>
+                </label>
+                <br>
+                <fieldset class="form-check form-switch" >
+                    <legend>Género:</legend>
+                    <label>
+                        <input type="radio" name="gender" value="masculino" required class="form-check-input" />
+                        Masculino
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="femenino" class="form-check-input"/>
+                        Femenino
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="prefiero-no-decirlo" class="form-check-input" />
+                        Prefiero no decirlo
+                    </label>
+                </fieldset>
+                <label class="checkbox">
+                    <input type="checkbox" name="newsletter" value="true" />
+                    ¿Deseas suscribirte al newsletter?
+                </label>
+                <br>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <button class="card-footer-item" type="submit">Registrarse</button>
+        </footer>
+    </form>
+    <article class="message is-warning" id="contenedor-mensaje">
+        <div class="message-header">
+            <p>Mensajes</p>
+        </div>
+        <div class="message-body" id="mensaje"></div>
+    </article>
+</body>
+
+</html>
