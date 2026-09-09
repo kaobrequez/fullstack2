@@ -23,3 +23,60 @@ fieldset {
     background-color: #a01c1c;
     display: none;
 }
+
+:root {
+  --color-fuchsia-neon: #FA0080;   /* Rosa fucsia brillante y vibrante para acentos y llamadas a la acción */
+  --color-cyan-electric: #00DDFA;  /* Cian eléctrico muy luminoso, ideal para destacar elementos visuales */
+  --color-yellow-gold: #FADD00;    /* Amarillo cadmio/mostaza puro para alertas, badges o contrastes */
+  --color-olive-gold: #A59837;     /* Verde oliva dorado/terroso para bordes sobrios o estados secundarios */
+  --color-plum-dark: #7A3D5D;      /* Ciruela/berenjena desaturado para encabezados, tarjetas o textos de alto contraste */
+  --color-teal-petroleum: #3D737A; /* Azul petróleo/verde azulado profundo para fondos oscuros o estructuras */
+}
+
+*{
+  outline: 1px solid red; /* Agrega un borde rojo para depuración visual. */
+  box-sizing: border-box;
+  margin: 0; /* Elimina el margen predeterminado de todos los elementos. */
+  padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+}
+
+/* Organiza las columnas principales de la pagina. */
+.row {
+  display: flex; /* Coloca los elementos hijos en una fila flexible. */
+  flex-wrap: wrap; /* Permite que los elementos bajen a otra linea. */
+  align-items: stretch; /* Estira los elementos a la altura disponible. */
+}
+
+/* Define los anchos de la grilla de 12 columnas. */
+.col-1 { width: 8.333%; } /* Ocupa una de doce columnas. */
+.col-2 { width: 16.666%; } /* Ocupa dos de doce columnas. */
+.col-3 { width: 25%; } /* Ocupa tres de doce columnas. */
+.col-4 { width: 33.333%; } /* Ocupa cuatro de doce columnas. */
+.col-5 { width: 41.666%; } /* Ocupa cinco de doce columnas. */
+.col-6 { width: 50%; } /* Ocupa seis de doce columnas. */
+.col-7 { width: 58.333%; } /* Ocupa siete de doce columnas. */
+.col-8 { width: 66.666%; } /* Ocupa ocho de doce columnas. */
+.col-9 { width: 75%; } /* Ocupa nueve de doce columnas. */
+.col-10 { width: 83.333%; } /* Ocupa diez de doce columnas. */
+.col-11 { width: 91.666%; } /* Ocupa once de doce columnas. */
+.col-12 { width: 100%; } /* Ocupa todo el ancho disponible. */
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Centra verticalmente los elementos del encabezado. */
+header .row {
+  align-items: center; /* Centra verticalmente el logo y el menu. */
+}
+
+/* Ordena los enlaces principales en una linea flexible. */
+.menu-principal ul {
+  display: flex; /* Coloca las opciones del menu en linea. */
+  flex-wrap: wrap; /* Permite que el menu se adapte a pantallas pequenas. */
+  justify-content: center; /* Centra las opciones horizontalmente. */
+  gap: 24px; /* Deja 24 pixeles entre cada opcion. */
+  padding: 0; /* Quita el espacio interno predeterminado. */
+  margin: 0; /* Quita el margen predeterminado de la lista. */
+  list-style: none; /* Quita las viñetas de la lista. */
+}
