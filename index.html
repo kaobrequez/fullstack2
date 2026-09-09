@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Esquina del Sabor</title>
+  <!-- Fuente Ubuntu de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="row">
+
+        <header class="col-12">
+            <div class="row">
+                <div class="col-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-badge">EdS</span>
+                        <span class="logo-text">Esquina del Sabor</span>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <nav class="menu-principal">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                            <li><a href="catalogo.html">Productos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="registro.html">Registro</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="col-9">
+
+            <!-- Fila de Productos -->
+            <section class="row">
+
+                <div class="col-3">
+                    <article class="card">
+                        <div class="product-image">
+                            <img src=""
+                                alt="Taladro inalámbrico 20V">
+                        </div>
+                        <h3 class="animate__animated animate__bounce">Taladro Inalámbrico 20V</h3>
+                        <p>Mandril de 13mm con 2 baterías de litio y maletín de transporte.</p>
+                        <a href="/taladro-inalambrico.html">Ver detalle</a>
+                    </article>
+                </div>
+                <div class="col-3">
+                    <article class="card">
+                        <div class="product-image">
+                            <img src="img/productos/hamburguer1.png"
+                                alt="Hamburguesa Clásica">
+                        </div>
+                        <h3 class="animate__animated animate__bounce">Taladro Percutor 750W</h3>
+                        <p>Ideal para perforar hormigón y madera, con control de velocidad variable.</p>
+                        <a href="/taladro-percutor.html">Ver detalle</a>
+                    </article>
+                </div>
+                <div class="col-3"> 
+                    <article class="card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1591012911200-1f5e7b8c6f4d?auto=format&fit=crop&w=600&q=80"
+                                alt="Taladro de Pedestal 500W">
+                        </div>
+                        <h3 class="animate__animated animate__bounce">Taladro de Pedestal 500W</h3>
+                        <p>Con base ajustable y velocidad variable, ideal para trabajos de precisión.</p>
+                        <a href="/taladro-pedestal.html">Ver detalle</a>
+                    </article>
+                
+            </section>
+
+
+
+        </main>
+
+        <!-- Menú lateral de categorías -->
+        <aside class="col-3 category-menu">
+            <div class="card">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#inalambricos">Taladros inalámbricos</a></li>
+                    <li><a href="#percutores">Taladros percutores</a></li>
+                    <li><a href="#pedestal">Taladros de pedestal</a></li>
+                    <li><a href="#accesorios">Accesorios</a></li>
+                </ul>
+
+                <h3>Buscar por marca</h3>
+                <label for="brand-filter">Selecciona una marca:</label>
+                <select id="brand-filter">
+                    <option value="todas">Todas las marcas</option>
+                    <option value="bosch">Bosch</option>
+                    <option value="makita">Makita</option>
+                    <option value="dewalt">DeWalt</option>
+                    <option value="stanley">Stanley</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Pie de página -->
+        <footer class="col-12">
+            <p>&copy; 2026 Tienda de Herramientas. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
