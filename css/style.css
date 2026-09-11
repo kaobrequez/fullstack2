@@ -86,22 +86,3 @@
 .col-11 { width: 91.666%; } /* Ocupa once de doce columnas. */
 .col-12 { width: 100%; } /* Ocupa todo el ancho disponible. */
 
-body {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-/* Centra verticalmente los elementos del encabezado. */
-header .row {
-  align-items: center; /* Centra verticalmente el logo y el menu. */
-}
-
-/* Ordena los enlaces principales en una linea flexible. */
-.menu-principal ul {
-  display: flex; /* Coloca las opciones del menu en linea. */
-  flex-wrap: wrap; /* Permite que el menu se adapte a pantallas pequenas. */
-  justify-content: center; /* Centra las opciones horizontalmente. */
-  gap: 24px; /* Deja 24 pixeles entre cada opcion. */
-  padding: 0; /* Quita el espacio interno predeterminado. */
-  margin: 0; /* Quita el margen predeterminado de la lista. */
-  list-style: none; /* Quita las viñetas de la lista. */
-}
