@@ -1,6 +1,4 @@
-// ==============================
-// Utilidades de almacenamiento
-// ==============================
+
 const CLAVE_USUARIOS = 'usuarios';
 
 function obtenerUsuarios() {
@@ -12,9 +10,6 @@ function guardarUsuarios(listaUsuarios) {
     localStorage.setItem(CLAVE_USUARIOS, JSON.stringify(listaUsuarios));
 }
 
-// ==============================
-// Registro de usuario
-// ==============================
 const formularioRegistro = document.getElementById('formulario-registro');
 
 if (formularioRegistro) {
@@ -34,7 +29,6 @@ if (formularioRegistro) {
 
         const usuarios = obtenerUsuarios();
 
-        // Evita registrar dos veces el mismo nombre de usuario
         const yaExiste = usuarios.some(
             (u) => u.username.toLowerCase() === username.toLowerCase()
         );
@@ -49,20 +43,16 @@ if (formularioRegistro) {
 
         mostrarMensaje('¡Registro exitoso! Redirigiendo al inicio...', 'is-success');
 
-        // Deshabilita el botón para evitar doble envío mientras se redirige
         const botonEnviar = formularioRegistro.querySelector('button[type="submit"]');
         if (botonEnviar) botonEnviar.disabled = true;
 
-        // Espera 3 segundos y redirige al inicio
         setTimeout(() => {
             window.location.href = '/index.html';
         }, 3000);
     });
 }
 
-// ==============================
-// Inicio de sesión
-// ==============================
+/* INICIO DE SEISON */
 const formularioLogin = document.getElementById('formulario-login');
 
 if (formularioLogin) {
@@ -84,7 +74,7 @@ if (formularioLogin) {
             return;
         }
 
-        // Guarda quién inició sesión en la pestaña actual
+
         sessionStorage.setItem('usuarioActual', usuarioEncontrado.username);
 
         mostrarMensaje('Sesión iniciada con éxito. Redirigiendo al inicio...', 'is-success');
@@ -98,11 +88,7 @@ if (formularioLogin) {
     });
 }
 
-/**
- * Muestra el contenedor de mensajes con el texto y estilo indicados.
- * @param {string} texto - Mensaje a mostrar.
- * @param {string} tipo - Clase de color de Bulma: is-success, is-danger, is-warning, etc.
- */
+
 function mostrarMensaje(texto, tipo = 'is-warning') {
     const contenedorMensaje = document.getElementById('contenedor-mensaje');
     const mensaje = document.getElementById('mensaje');
