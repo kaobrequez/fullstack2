@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="../js/script.js" type="module"></script>
+</head>
+
+<body class="contenedor-login">
+
+    <div class="card card-login">
+        <header class="card-header">
+            <p class="card-header-title is-centered title is-4 has-text-primary">
+                Iniciar sesión
+            </p>
+        </header>
+
+        <div class="card-content">
+            <form action="#" method="post" id="formulario-login">
+
+                <!-- Nombre de usuario -->
+                <div class="field">
+                    <label class="label" for="login-username">Nombre de usuario</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" id="login-username" name="username" placeholder="Ej. usuario123" required autocomplete="username">
+                    </div>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="field">
+                    <label class="label" for="login-password">Contraseña</label>
+                    <div class="control">
+                        <input class="input is-primary" type="password" id="login-password" name="password" placeholder="***********" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="field mt-5">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth is-medium" type="submit">
+                            Iniciar sesión
+                        </button>
+                    </div>
+                </div>
+
+                <p class="has-text-centered mt-4">
+                    ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Mensajes de alerta -->
+    <article class="message is-warning" id="contenedor-mensaje">
+        <div class="message-header">
+            <p>Mensajes</p>
+        </div>
+        <div class="message-body" id="mensaje"></div>
+    </article>
+
+</body>
+</html>

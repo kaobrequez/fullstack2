@@ -7,7 +7,7 @@
     <title>Registro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/script.js" type="module"></script>
+    <script src="../js/script.js" type="module"></script>
 </head>
 
 <body class="contenedor-registro">
@@ -27,6 +27,14 @@
                     <label class="label" for="username">Nombre de usuario</label>
                     <div class="control">
                         <input class="input is-primary" type="text" id="username" name="username" placeholder="Ej. usuario123" required autocomplete="username">
+                    </div>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="field">
+                    <label class="label" for="password">Contraseña</label>
+                    <div class="control">
+                        <input class="input is-primary" type="password" id="password" name="password" placeholder="***********" required autocomplete="new-password">
                     </div>
                 </div>
 
@@ -113,6 +121,10 @@
                         </button>
                     </div>
                 </div>
+
+                <p class="has-text-centered mt-4">
+                    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+                </p>
 
             </form>
         </div>
