@@ -4,103 +4,127 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validaciones</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <script src="js/script.js" type="module"></script>
 </head>
 
-<body>
-    <form action="#" method="post" class="card formulario">
+<body class="contenedor-registro">
+
+    <div class="card card-registro">
         <header class="card-header">
-            <p class="card-header-title">Registro de usuario</p>
+            <p class="card-header-title is-centered title is-4 has-text-primary">
+                Registro de usuario
+            </p>
         </header>
+
         <div class="card-content">
-            <div class="content">
-                <label>
-                    Nombre de usuario:
-                    <input type="text" name="username" placeholder="Ej. usuario123" required aria-required="true"
-                        autocomplete="username" class="input is-primary" />
-                </label>
-                <br>
-                <label>
-                    Correo electrónico:
-                    <input type="email" name="email" placeholder="ejemplo@correo.com" required aria-required="true"
-                        autocomplete="email" class="input is-primary" />
-                </label>
-                <br>
-                <label>
-                    Teléfono móvil:
-                    <input type="tel" name="phone" placeholder="+56912345678" pattern="^(\+?56)?\s?9\d{8}$"
-                        title="Ingrese un número chileno válido (ej: +56912345678 o 912345678)" required
-                        aria-required="true" autocomplete="tel" class="input is-primary" />
-                </label>
-                <br>
-                <label>
-                    Edad:
-                    <input class="input is-primary" type="number" name="age" />
-                </label>
-                <br>
-                <label>
-                    País:
-                    <div class="select is-primary">
-                        <select name="country" required aria-required="true" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option value="" selected disabled>Seleccione país</option>
-                            <option value="AR">Argentina</option>
-                            <option value="BO">Bolivia</option>
-                            <option value="BR">Brasil</option>
-                            <option value="CL">Chile</option>
-                            <option value="CO">Colombia</option>
-                            <option value="CR">Costa Rica</option>
-                            <option value="CU">Cuba</option>
-                            <option value="EC">Ecuador</option>
-                            <option value="SV">El Salvador</option>
-                            <option value="GT">Guatemala</option>
-                            <option value="HN">Honduras</option>
-                            <option value="MX">México</option>
-                            <option value="NI">Nicaragua</option>
-                            <option value="PA">Panamá</option>
-                            <option value="PY">Paraguay</option>
-                            <option value="PE">Perú</option>
-                            <option value="DO">República Dominicana</option>
-                            <option value="UY">Uruguay</option>
-                            <option value="VE">Venezuela</option>
-                        </select>
+            <form action="#" method="post" id="formulario-registro">
+
+                <!-- Nombre de usuario -->
+                <div class="field">
+                    <label class="label" for="username">Nombre de usuario</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" id="username" name="username" placeholder="Ej. usuario123" required autocomplete="username">
                     </div>
-                </label>
-                <br>
-                <fieldset class="form-check form-switch" >
-                    <legend>Género:</legend>
-                    <label>
-                        <input type="radio" name="gender" value="masculino" required class="form-check-input" />
-                        Masculino
-                    </label>
-                    <label>
-                        <input type="radio" name="gender" value="femenino" class="form-check-input"/>
-                        Femenino
-                    </label>
-                    <label>
-                        <input type="radio" name="gender" value="prefiero-no-decirlo" class="form-check-input" />
-                        Prefiero no decirlo
-                    </label>
-                </fieldset>
-                <label class="checkbox">
-                    <input type="checkbox" name="newsletter" value="true" />
-                    ¿Deseas suscribirte al newsletter?
-                </label>
-                <br>
-            </div>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="field">
+                    <label class="label" for="email">Correo electrónico</label>
+                    <div class="control">
+                        <input class="input is-primary" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required autocomplete="email">
+                    </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="field">
+                    <label class="label" for="phone">Teléfono móvil</label>
+                    <div class="control">
+                        <input class="input is-primary" type="tel" id="phone" name="phone" placeholder="+56912345678" pattern="^(\+?56)?\s?9\d{8}$" title="Ingrese un número chileno válido" required autocomplete="tel">
+                    </div>
+                </div>
+
+                <!-- Edad -->
+                <div class="field">
+                    <label class="label" for="age">Edad</label>
+                    <div class="control">
+                        <input class="input is-primary" type="number" id="age" name="age" placeholder="25" min="1" max="120" required>
+                    </div>
+                </div>
+
+                <!-- País -->
+                <div class="field">
+                    <label class="label" for="country">País</label>
+                    <div class="control">
+                        <div class="select is-primary is-fullwidth">
+                            <select id="country" name="country" required>
+                                <option value="" selected disabled>Seleccione país</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CL">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="MX">México</option>
+                                <option value="PE">Perú</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Género -->
+                <div class="field">
+                    <label class="label">Género</label>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="gender" value="masculino" required>
+                            Masculino
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="gender" value="femenino">
+                            Femenino
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="gender" value="prefiero-no-decirlo">
+                            Otro
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="field mt-4">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="newsletter" value="true">
+                            ¿Deseas suscribirte al newsletter?
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="field mt-5">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth is-medium" type="submit">
+                            Registrarse
+                        </button>
+                    </div>
+                </div>
+
+            </form>
         </div>
-        <footer class="card-footer">
-            <button class="card-footer-item" type="submit">Registrarse</button>
-        </footer>
-    </form>
+    </div>
+
+    <!-- Mensajes de alerta -->
     <article class="message is-warning" id="contenedor-mensaje">
         <div class="message-header">
             <p>Mensajes</p>
         </div>
         <div class="message-body" id="mensaje"></div>
     </article>
-</body>
 
+</body>
 </html>

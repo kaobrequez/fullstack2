@@ -1,27 +1,53 @@
-.formulario {
-    width: 400px;
-    margin: 1rem auto;
-    padding: 1rem;
+.contenedor-registro {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
 }
-.content label {
-    display: block;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
 
+.contenedor-registro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/logo/fondo2.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(0.7);
+  transform: scale(1.05);
+  z-index: -1;
 }
-fieldset {
 
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 15px;
 
+.card-registro {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(228, 218, 218, 0.92); 
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
+
+.card-header {
+  box-shadow: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+s
 #contenedor-mensaje {
-    width: 400px;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: #a01c1c;
-    display: none;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 1rem;
+  display: none;
 }
 
 :root {
@@ -34,7 +60,7 @@ fieldset {
 }
 
 *{
-  outline: 1px solid red; /* Agrega un borde rojo para depuración visual. */
+
   box-sizing: border-box;
   margin: 0; /* Elimina el margen predeterminado de todos los elementos. */
   padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
