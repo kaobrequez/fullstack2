@@ -88,23 +88,54 @@ header .row {
   /* Centra verticalmente el logo y el menu. */
 }
 
-
-
-
-/* Ordena los enlaces principales en una linea flexible. */
-.menu-principal ul {
-  display: flex;
-  /* Coloca las opciones del menu en linea. */
-  flex-wrap: wrap;
-  /* Permite que el menu se adapte a pantallas pequenas. */
-  justify-content: center;
-  /* Centra las opciones horizontalmente. */
-  gap: 24px;
-  /* Deja 24 pixeles entre cada opcion. */
-  padding: 0;
-  /* Quita el espacio interno predeterminado. */
-  margin: 0;
-  /* Quita el margen predeterminado de la lista. */
-  list-style: none;
-  /* Quita las viñetas de la lista. */
+.title {
+  margin-bottom: 0.5rem !important;
 }
+
+.subtitle {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.3 !important;
+}
+
+/* 2. Ajuste para que los textos dentro de las tarjetas tengan espacio suficiente */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px; /* Asegura un alto uniforme para que no se pisen */
+}
+
+.card-content .title {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important;
+}
+
+.card-content .subtitle {
+  font-size: 0.85rem !important;
+}
+
+
+.box {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+}
+
+/* Ajustes para las tarjetas de productos */
+.card.box {
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover estilo Wendy's / McDonald's al pasar el ratón */
+.card.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-image img {
+  object-fit: cover;
+}
+
