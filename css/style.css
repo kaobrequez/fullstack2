@@ -111,6 +111,11 @@
   /* Elimina el relleno predeterminado de todos los elementos */
 }
 
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
   background-image: url('../img/logo/fondo2.avif');

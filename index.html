@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Esquina del Sabor - Menú</title>
+    <!-- Fuente Ubuntu de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- JS -->
+    <script src="js/script.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- Cambiamos 'my-4' por 'pt-4 mb-4' -->
+    <header class="container pt-4 mb-4">
+        <div class="box is-flex is-justify-content-space-between is-align-items-center">
+            <div>
+                <h1 class="title is-2 has-text-dark mb-0">La Esquina del Sabor 🍔</h1>
+                <p class="subtitle is-6 text-muted">¡El mejor sabor a un clic!</p>
+            </div>
+            <button class="button is-warning is-medium">
+                <span>🛒 Ver Pedido ($0)</span>
+            </button>
+        </div>
+    </header>
+    <!-- Estructura en dos columnas: Categorías + Menú de Productos -->
+    <div class="container my-4">
+        <div class="columns">
+
+            <!-- Columna lateral: Filtro de Categorías -->
+            <aside class="column is-3">
+                <nav class="menu box" aria-label="Categorías de comida">
+                    <p class="menu-label">Categorías</p>
+                    <ul class="menu-list">
+                        <li><a href="#hamburguesas" class="is-active">🍔 Hamburguesas</a></li>
+                        <li><a href="#completos">🌭 Completos</a></li>
+                        <li><a href="#papas">🍟 Papas Fritas</a></li>
+                        <li><a href="#bebidas">🥤 Bebidas y Postres</a></li>
+                    </ul>
+
+                    <p class="menu-label">Mi Cuenta</p>
+                    <ul class="menu-list">
+                        <li><a href="/pages/contacto.html">Contacto</a></li>
+                        <li><a href="/pages/registro.html">Registro</a></li>
+                        <li><a href="/pages/login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Columna principal: Catálogo de Productos -->
+            <main class="column is-9">
+
+                <!-- Sección Hamburguesas -->
+                <section id="hamburguesas" class="mb-6">
+                    <h2 class="title is-4 box">🍔 Hamburguesas</h2>
+
+                    <div class="columns is-multiline">
+                        <!-- Producto 1 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500"
+                                            alt="Hamburguesa Doble Queso">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Doble Queso Bacon</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Doble carne, doble cheddar, tocino
+                                        crocante y salsa de la casa.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$6.990</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500"
+                                            alt="Clásica Esquina">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Clásica Esquina</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Carne 100% vacuno, lechuga, tomate,
+                                        cebolla y pepinillos.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$5.490</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=500"
+                                            alt="BBQ Chicken Burger">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Pollo Crispy BBQ</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Pollo empanizado crujiente, queso
+                                        cheddar y salsa BBQ.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$5.990</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Completos -->
+                <section id="completos" class="mb-6">
+                    <h2 class="title is-4 box">🌭 Completos</h2>
+
+                    <div class="columns is-multiline">
+                        <!-- Producto 4 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=500"
+                                            alt="Completo Italiano">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Italiano Gigante</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Vienesa tradicional, palta molida
+                                        fresca, tomate y mayonesa casera.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$3.200</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=500"
+                                            alt="Completo Dinámico">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Completo Dinámico</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Vienesa, tomate, palta, chucrut, salsa
+                                        americana y mayonesa.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$3.500</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Papas Fritas -->
+                <section id="papas" class="mb-6">
+                    <h2 class="title is-4 box">🍟 Papas Fritas</h2>
+
+                    <div class="columns is-multiline">
+                        <!-- Producto 6 -->
+                        <div class="column is-4">
+                            <div class="card box p-0 overflow-hidden">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500"
+                                            alt="Papas Cheddar Bacon">
+                                    </figure>
+                                </div>
+                                <div class="card-content p-4">
+                                    <p class="title is-5 mb-2">Papas Cheddar & Tocino</p>
+                                    <p class="subtitle is-6 has-text-grey mb-3">Papas crujientes bañadas en salsa
+                                        cheddar caliente y tocino picado.</p>
+                                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                        <span class="title is-5 has-text-danger mb-0">$4.500</span>
+                                        <button class="button is-danger is-small is-rounded">Añadir ➕</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de Video Promocional -->
+                <section id="video-promo" class="mb-6">
+                    <div class="box">
+                        <h2 class="title is-4 mb-4">🎥 ¡Conoce nuestra cocina!</h2>
+
+                        <figure class="image is-16by9">
+                            <iframe class="has-ratio" width="640" height="360"
+                                src="https://www.youtube.com/embed/L61p2uyiMSo"
+                                title="Video promocional La Esquina del Sabor" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </figure>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer py-5 mt-5">
+        <div class="content has-text-centered box mb-0">
+            <p>&copy; 2023 La Esquina del Sabor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
