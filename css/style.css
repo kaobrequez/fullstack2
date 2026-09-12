@@ -129,14 +129,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-
-  /* Tu imagen de fondo */
   background-image: url('../img/logo/fondo2.avif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   filter: blur(8px);
-  transform: scale(1.05);
+  transform: scale(1.05); 
   z-index: -1;
 }
 
