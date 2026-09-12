@@ -182,3 +182,84 @@ header .row {
   object-fit: cover;
 }
 
+/* Botón Flotante de WhatsApp */
+/* ---------------------------------------------------------------------------------- */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+/* footer */
+/* ---------------------------------------------------------------------------------- */
+/* Espaciado para botones de redes sociales */
+/* --- Estilos personalizados para el Footer --- */
+
+/* Quita el fondo y relleno por defecto de Bulma para el footer */
+/* Corrección para forzar el fondo negro del footer */
+/* Caja negra delimitada al ancho del container */
+.footer-negro {
+    background-color: #121212 !important;
+    border-radius: 12px; /* Redondeado idéntico a las demás tarjetas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.footer-negro p, 
+.footer-negro strong {
+    color: #ffffff !important;
+}
+
+.redes-container {
+    gap: 15px;
+}
+
+.redes-link {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+.redes-link:hover {
+    transform: scale(1.15);
+}
+
+
+/* Contenedor circular/ovalado del logo */
+.logo-card-container {
+    width: 100px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 6px; /* Bordes redondeados parejos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+/* Imagen del logo con zoom y desplazamiento superior */
+.logo-card {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    /* Aumenta el tamaño (zoom) y desplaza ligeramente hacia arriba */
+    transform: scale(1.35) translateY(-5px); 
+    transform-origin: center center;
+}
